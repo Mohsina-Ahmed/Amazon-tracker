@@ -30,7 +30,7 @@ print(price_as_float)
 #if price_as_float < 200:
 if price_as_float < 140:
     my_gmail = "myworkuse93@gmail.com"
-    password = "{{ github.gmail_secret }}"
+    password = "${{ secrets.GMAIL_SECRET }}"
     connection = smtplib.SMTP("smtp.gmail.com")
     connection.starttls()  # make connection secure
     connection.login(user=my_gmail, password=password)
